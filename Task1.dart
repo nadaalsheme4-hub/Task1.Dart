@@ -2,7 +2,7 @@ import 'dart:math';
 
 void main() {
   Random random = Random();
-  int degree = random.nextInt(101); // من 0 لـ 100
+  int degree = random.nextInt(101); 
 
   print("Degree: $degree");
 
