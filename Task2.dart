@@ -5,7 +5,7 @@ void main() {
   List<String> studentNames = [];
   List<List<double>> studentGrades = [];
 
-  // 1. Ask number of students
+  
   int numStudents = 0;
   while (true) {
     stdout.write("Enter number of students: ");
@@ -17,7 +17,7 @@ void main() {
     print("Invalid input! Please enter a positive integer.");
   }
 
-  // 2. Collect student data
+  
   for (int i = 0; i < numStudents; i++) {
     stdout.write("Enter name of student ${i + 1}: ");
     String? name = stdin.readLineSync();
@@ -56,7 +56,7 @@ void main() {
     studentGrades.add(grades);
   }
 
-  // 4. Infinite loop menu
+  
   while (true) {
     print("\n--- MENU ---");
     print("1. Show All Results");
@@ -67,7 +67,7 @@ void main() {
     String? choice = stdin.readLineSync();
 
     if (choice == "1") {
-      // Show All Results
+      
       for (int i = 0; i < studentNames.length; i++) {
         String name = studentNames[i].toUpperCase();
         List<double> grades = studentGrades[i];
@@ -77,7 +77,7 @@ void main() {
         print("$name - Average: $roundedAvg - Grade: $letter");
       }
     } else if (choice == "2") {
-      // Search student
+      
       stdout.write("Enter student name to search: ");
       String? searchName = stdin.readLineSync();
       if (searchName != null) {
@@ -102,7 +102,7 @@ void main() {
   }
 }
 
-// Function to convert average to letter grade
+
 String getLetterGrade(double avg) {
   if (avg >= 90) return "A";
   if (avg >= 80) return "B";
